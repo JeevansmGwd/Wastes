@@ -1,0 +1,15 @@
+# pip install boto3
+
+import boto3
+
+# Let's use Amazon S3
+s3 = boto3.resource('s3')
+bucket_name = 'new-karthik-bucket-exp12'
+region = 'ap-southeast-2'  # specify your region here
+
+file_1 = 'file_1.txt'
+file_2 = 'file_2.txt'
+
+# uploading file
+s3.Bucket(bucket_name).upload_file(Filename=file_1, Key=file_1)
+print(f"File {file_1} Uploaded")
